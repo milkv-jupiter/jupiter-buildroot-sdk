@@ -85,13 +85,13 @@ The compilation process may require downloading some third-party software packag
 
 After the compilation is completed, you can see the following results:
 ```
-Images successfully packed into /build/jupiter-build/output/k1/images/bianbu-linux-k1.zip
+Images successfully packed into /build/jupiter-linux/output/k1/images/bianbu-linux-k1.zip
 
 
 Generating sdcard image...................................
-INFO: cmd: "mkdir -p "/build/jupiter-build/output/k1/build/genimage.tmp"" (stderr):
-INFO: cmd: "rm -rf "/build/jupiter-build/output/k1/build/genimage.tmp"/*" (stderr):
-INFO: cmd: "mkdir -p "/build/jupiter-build/output/k1/images"" (stderr):
+INFO: cmd: "mkdir -p "/build/jupiter-linux/output/k1/build/genimage.tmp"" (stderr):
+INFO: cmd: "rm -rf "/build/jupiter-linux/output/k1/build/genimage.tmp"/*" (stderr):
+INFO: cmd: "mkdir -p "/build/jupiter-linux/output/k1/images"" (stderr):
 INFO: hdimage(bianbu-linux-k1-sdcard.img): adding partition 'bootinfo' from 'factory/bootinfo_sd.bin' ...
 INFO: hdimage(bianbu-linux-k1-sdcard.img): adding partition 'fsbl' (in MBR) from 'factory/FSBL.bin' ...
 INFO: hdimage(bianbu-linux-k1-sdcard.img): adding partition 'env' (in MBR) from 'env.bin' ...
@@ -106,7 +106,7 @@ INFO: hdimage(bianbu-linux-k1-sdcard.img): adding partition '[GPT backup]' ...
 INFO: hdimage(bianbu-linux-k1-sdcard.img): writing GPT
 INFO: hdimage(bianbu-linux-k1-sdcard.img): writing protective MBR
 INFO: hdimage(bianbu-linux-k1-sdcard.img): writing MBR
-Successfully generated at /build/jupiter-build/output/k1/images/bianbu-linux-k1-sdcard.img
+Successfully generated at /build/jupiter-linux/output/k1/images/bianbu-linux-k1-sdcard.img
 ```
 
 `bianbu-linux-k1.zip` is suitable for titanflasher, or can be decompressed and flashed with fastboot, `bianbu-linux-k1-sdcard.img` is the sdcard firmware, which can be written to the sdcard with the dd command or balenaEtcher after decompression.
