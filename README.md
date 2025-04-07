@@ -68,7 +68,7 @@ Directory Structure:
 
 ## Compilation
 
-For the first compilation, it is recommended to use `make envconfig` to compile completely. If `buildroot-ext/configs/spacemit_k1_defconfig` has been modified, use `make envconfig` to compile. In other cases, just use `make` to compile.
+For the first compilation, it is recommended to use `make envconfig` to compile completely. If `buildroot-ext/configs/spacemit_k1_v2_defconfig` has been modified, use `make envconfig` to compile. In other cases, just use `make` to compile.
 
 ```
 cd jupiter-linux
@@ -90,13 +90,13 @@ The compilation process may require downloading some third-party software packag
 
 After the compilation is completed, you can see the following results:
 ```
-Images successfully packed into /build/jupiter-sdkv2/local/output/k1_v2/images/bianbu-linux-k1_v2.zip
+Images successfully packed into /build/jupiter-linux/local/output/k1_v2/images/bianbu-linux-k1_v2.zip
 
 
 Generating sdcard image...................................
-INFO: cmd: "mkdir -p "/build/jupiter-sdkv2/local/output/k1_v2/build/genimage.tmp"" (stderr):
-INFO: cmd: "rm -rf "/build/jupiter-sdkv2/local/output/k1_v2/build/genimage.tmp"/*" (stderr):
-INFO: cmd: "mkdir -p "/build/jupiter-sdkv2/local/output/k1_v2/images"" (stderr):
+INFO: cmd: "mkdir -p "/build/jupiter-linux/local/output/k1_v2/build/genimage.tmp"" (stderr):
+INFO: cmd: "rm -rf "/build/jupiter-linux/local/output/k1_v2/build/genimage.tmp"/*" (stderr):
+INFO: cmd: "mkdir -p "/build/jupiter-linux/local/output/k1_v2/images"" (stderr):
 INFO: hdimage(bianbu-linux-k1_v2-sdcard.img): adding partition 'bootinfo' from 'factory/bootinfo_sd.bin' ...
 INFO: hdimage(bianbu-linux-k1_v2-sdcard.img): adding partition 'fsbl' (in MBR) from 'factory/FSBL.bin' ...
 INFO: hdimage(bianbu-linux-k1_v2-sdcard.img): adding partition 'env' (in MBR) from 'env.bin' ...
@@ -111,8 +111,8 @@ INFO: hdimage(bianbu-linux-k1_v2-sdcard.img): adding partition '[GPT backup]' ..
 INFO: hdimage(bianbu-linux-k1_v2-sdcard.img): writing GPT
 INFO: hdimage(bianbu-linux-k1_v2-sdcard.img): writing protective MBR
 INFO: hdimage(bianbu-linux-k1_v2-sdcard.img): writing MBR
-Successfully generated at /build/jupiter-sdkv2/local/output/k1_v2/images/bianbu-linux-k1_v2-sdcard.img
-make[1]: Leaving directory '/build/jupiter-sdkv2/local/output/k1_v2'
+Successfully generated at /build/jupiter-linux/local/output/k1_v2/images/bianbu-linux-k1_v2-sdcard.img
+make[1]: Leaving directory '/build/jupiter-linux/local/output/k1_v2'
 ```
 
 `bianbu-linux-k1_v2.zip` is suitable for titanflasher, or can be decompressed and flashed with fastboot, `bianbu-linux-k1_v2-sdcard.img` is the sdcard firmware, which can be written to the sdcard with the dd command or balenaEtcher after decompression.
